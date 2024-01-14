@@ -2,40 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roshan's Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Nova+Square&family=Poppins:wght@300;500&family=Rethink+Sans&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 <body>
+    <header class="header">
+        <a href="#" class="logo">Roshan</a>
 
-    <!-- * NAVIGATION BAR -->
-    <nav id="nav_bar">
-        <section id="sec1">
-            <div class="left_nav">
-                <aside class="name">ROSHAN</aside>
-            </div>
-            <div class="right_nav">
-                <aside class="nav_items i1"><a href="#home">Home</a></aside>
-                <aside class="nav_items i2"><a href="#about">About</a></aside>
-                <aside class="nav_items i3"><a href="#skills">Skills</a></aside>
-                <aside class="nav_items i4"><a href="#project">Project</a></aside>
-                <aside class="nav_items i5"><a href="#contact">Contact</a></aside>
-            </div>
-        </section>
-    </nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="#home" style="--i:0">Home</a>
+            <a href="#about" style="--i:1">About</a>
+            <a href="#skills" style="--i:2">Skills</a>
+            <a href="#project" style="--i:3">Project</a>
+            <a href="#contact" style="--i:4">Contact</a>
+        </nav>
+
+    </header>
 
     <!-- * HOME -->
     <section class="home_part" id="home">
         <div class="box_div"></div>
         <div class="image_div">
-            <img src="img/roshan.png" alt="Roshan" height="88%" width="86%" >
+            <img src="img/roshan.png" alt="Roshan" height="59%" width="59%" >
         </div>
         <div class="text_div">
             <aside class="hello">HELLO,</aside>
@@ -53,9 +56,8 @@
                 <a href="#project"><div class="hire_div project_div"><i class="fa-solid fa-diagram-project"></i>&nbsp; Projects</div></a>
             </aside>
         </div>
-        <i class="fa-solid fa-bars design design1"></i>
-        <i class="fa-solid fa-bars design design2"></i>
     </section>
+
 
     <!-- * ABOUT -->
     <section class="about_part" id="about">
@@ -126,7 +128,7 @@
     <!-- * PROJECTS -->
     <section class="project_part" id="project">
         <article>Projects</article>
-        <aside class="pp">
+        <aside class="container">
             <div class="pp_div">
                 <a href="https://www.figma.com/file/D3XUsSFjTgVhYm2EZix63N/Untitled?type=design&node-id=32%3A73&mode=design&t=11Gqyh9n19uHvECO-1" target="_blank">
                     <img src="img/project1.png" alt="project1">
@@ -139,14 +141,12 @@
                 </a>
                 <article>Figma Ui Project</article>
             </div>
-            <div class="pp_div">
+            <div class="pp_div p1">
                 <a href="https://www.figma.com/file/D3XUsSFjTgVhYm2EZix63N/Untitled?type=design&node-id=32%3A73&mode=design&t=11Gqyh9n19uHvECO-1" target="_blank">
                     <img src="img/project3.png" alt="project3">
                 </a>
                 <article>Figma Ui Project</article>
             </div>
-        </aside>
-        <aside class="pp">
             <div class="pp_div">
                 <a href="https://www.figma.com/file/D3XUsSFjTgVhYm2EZix63N/Untitled?type=design&node-id=32%3A73&mode=design&t=11Gqyh9n19uHvECO-1" target="_blank">
                     <img src="img/project4.png" alt="project4">
@@ -165,8 +165,6 @@
                 </a>
                 <article>HTML CSS Template Design</article>
             </div>
-        </aside>
-        <aside class="pp">
             <div class="pp_div">
                 <a href="https://github.com/Roshan2502/Online-Attendance-Management-System" target="_blank">
                     <img src="img/project7.png" alt="project7">
@@ -242,34 +240,6 @@
             </article>
         </aside>
     </section>
-    
-
-
-
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyAaAr4uHDBLSLH44PMI01WhbMvTu2j1GE4",
-          authDomain: "vertical-reason-365813.firebaseapp.com",
-          projectId: "vertical-reason-365813",
-          storageBucket: "vertical-reason-365813.appspot.com",
-          messagingSenderId: "874983034055",
-          appId: "1:874983034055:web:66aa034ac93caef86b02e2",
-          measurementId: "G-1M6KMVY73T"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
-
 
 </body>
 </html>
